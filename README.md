@@ -1,4 +1,4 @@
-# Nextjs Contact App
+# Nextjs Conect Point
 
 A modern and professional communication app built with Next.js using the pages router. Features a responsive contact form UI, portfolio showcase, animated UI elements, and local SQLite database integration for project data.
 
