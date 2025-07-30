@@ -1,0 +1,122 @@
+.container {
+  max-width: 36rem;
+  margin: 4rem auto 3rem auto;
+  padding: 2.5rem 1.5rem;
+  color: #f0f0f0;
+  font-family: "Open Sans", "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* removes full-width stretch, centers child elements */
+}
+
+.title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff7e5f);
+  background-size: 200% 200%;
+  animation: gradientText 5s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.15rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #d7d7d7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 32rem;
+  align-items: stretch; /* ensures fields fill form width */
+}
+
+.container :global(label) {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.container :global(input),
+.container :global(textarea) {
+  font-family: "Open Sans", "Lato", sans-serif;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255 255 255 / 0.3);
+  background-color: rgba(255 255 255 / 0.08);
+  color: #f0f0f0;
+  transition: border-color 0.3s ease;
+  outline-offset: 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submitBtn {
+  width: 100%;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(255, 126, 95, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.submitBtn:hover,
+.submitBtn:focus {
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+  box-shadow: 0 6px 22px rgba(255, 126, 95, 0.6);
+  outline: none;
+}
+
+/* Error & success message styling */
+.errorMsg,
+.successMsg {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.errorMsg {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+.successMsg {
+  color: #8cff7e;
+  font-weight: 600;
+}
+
+/* Animation for gradient text */
+@keyframes gradientText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1.3rem 0.5rem;
+    max-width: 98vw;
+  }
+  .form {
+    padding: 0;
+    max-width: 100vw;
+  }
+}
